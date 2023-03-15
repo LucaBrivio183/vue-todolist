@@ -22,7 +22,7 @@
           </div>
         <ul class="list-group w-100"> <!-- shown list  -->
             <li class="list-group-item w-100 p-2 d-flex justify-content-between align-items-center" v-for="(item,index) in toDoList">
-                <span class="flex-grow-1" :class="{ done: toDoList[index].done}">{{toDoList[index].text}}</span>
+                <span @click="changeDone(index)" class="flex-grow-1" :class="{ done: toDoList[index].done}">{{toDoList[index].text}}</span>
                 <i class="fa-solid fa-xmark" @click="removeListItem(index)"></i>
             </li>
           </ul>
