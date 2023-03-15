@@ -17,7 +17,10 @@
     <div class="container-md" id="app" v-cloak>
         <h1 class="text-center p-3">{{ pageTitle }}</h1>
         <ul class="list-group w-100">
-            <li class="list-group-item w-100" :class="{ done: toDoList[index].done}" v-for="(item,index) in toDoList">{{toDoList[index].text}}</li>
+            <li class="list-group-item w-100 p-2 d-flex justify-content-between align-items-center" v-for="(item,index) in toDoList">
+                <span :class="{ done: toDoList[index].done}">{{toDoList[index].text}}</span>
+                <i class="fa-solid fa-xmark" @click="removeListItem(index)"></i>
+            </li>
           </ul>
     </div>
     <!-- vue js cdn -->
