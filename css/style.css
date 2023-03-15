@@ -1,0 +1,21 @@
+/* reset */
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[v-cloak] {
+    display:  none
+}
+
+/* common */
+
+body {
+    background-color: pink;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
