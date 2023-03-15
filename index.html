@@ -14,13 +14,16 @@
 </head>
 <body>
     <!-- vue js app container -->
-    <div id="app" v-cloak>
-
+    <div class="container-md" id="app" v-cloak>
+        <h1 class="text-center p-3">{{ pageTitle }}</h1>
+        <ul class="list-group w-100">
+            <li class="list-group-item w-100" :class="{ done: toDoList[index].done}" v-for="(item,index) in toDoList">{{toDoList[index].text}}</li>
+          </ul>
     </div>
     <!-- vue js cdn -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <!-- local js files -->
-    <script src="./js/script.js"></script>
+    <script src="js/main.js"></script>
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
