@@ -5,6 +5,10 @@ createApp ({
         return {            
             pageTitle:'Vue To Do List',
             index: 0,
+            newItem: {
+                text: '',
+                done: false,
+              },
             toDoList: [
                 {
                     text:'prepare pancake',
@@ -37,6 +41,9 @@ createApp ({
     methods: {
         removeListItem(index){
             this.toDoList.splice(index, 1);
+        },
+        addListItem(){
+            this.toDoList.push(this.newItem);
         }
     },   
 }).mount('#app');
