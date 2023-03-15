@@ -43,7 +43,10 @@ createApp ({
             this.toDoList.splice(index, 1);
         },
         addListItem(){
-            this.toDoList.push(this.newItem);
+            if(this.newItem.text.trim() != '')  {
+                this.toDoList.push(this.newItem);
+                this.newItem = {text: '',done: false,}
+            }
         }
     },   
 }).mount('#app');

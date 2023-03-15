@@ -17,7 +17,7 @@
     <div class="container-md" id="app" v-cloak>
         <h1 class="text-center p-3">{{ pageTitle }}</h1><!-- app title -->
         <div class="input-group mb-3"> <!-- input for add to list -->
-            <input v-model="newItem.text" type="text" class="form-control" placeholder="add item" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <input @keyup.enter="addListItem" v-model="newItem.text" type="text" class="form-control" placeholder="add item" aria-label="Recipient's username" aria-describedby="button-addon2">
             <button @click="addListItem" class="btn btn-outline-secondary" type="button" id="button-addon2">Add</button>
           </div>
         <ul class="list-group w-100"> <!-- shown list  -->
