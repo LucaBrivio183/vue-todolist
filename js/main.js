@@ -12,7 +12,7 @@ createApp ({
             toDoList: [
                 {
                     text:'prepare pancake',
-                    done: true,
+                    done: false,
                 },{
                     text:'take supplements with salted water',
                     done: false,
